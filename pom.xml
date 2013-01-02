@@ -35,7 +35,7 @@
             <version>2.1.1</version>
             <configuration>
               <outputDirectory>deployments</outputDirectory>
-              <warName>ROOT</warName>
+              <warName>ws</warName>
             </configuration>
           </plugin>
         </plugins>

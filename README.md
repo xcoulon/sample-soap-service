@@ -1,6 +1,12 @@
-Sample Web Service that can be deployed on OpenShift.
-The trick is to include a WEB-INF/jboss-web.xml to force the deployment context to "/ws" instead of ROOT, otherwise, the endpoint won't be reachable.
-(well, we could use "/", but using "/ws" avoid possible collision with local servers which may also have a local web app deployed at /)
+# Sample Web Service that can be deployed on OpenShift.
+
+If you want to keep the deployment content to "/", then the trick is to include a WEB-INF/jboss-web.xml to force the deployment context to "/ws" instead of ROOT, otherwise, the endpoint won't be reachable:
+
+    <jboss-web>
+       <context-root>/ws</context-root>
+    </jboss-web>
+
+In the current case, we deploy at "/ws" to avoid possible collision with local servers which may also have a local web app deployed at "/". In that case, there is no need for the WEB-INF/jboss-web.xml file
 
 Also, pay *very much* attention to the .openshift/config/standalone.xml, some customization is required to get proper
 SOAPBinding:

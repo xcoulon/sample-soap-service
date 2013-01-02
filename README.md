@@ -1,0 +1,2 @@
+Sample Web Service that can be deployed on OpenShift.
+The trick is to include a WEB-INF/jboss-web.xml to force the deployment context to "/" instead of ROOT, otherwise, the endpoint won't be reachable.

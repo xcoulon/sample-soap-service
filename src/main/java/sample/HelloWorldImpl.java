@@ -1,9 +1,9 @@
-package com.mkyong.ws;
+package sample;
  
 import javax.jws.WebService;
  
 //Service Implementation
-@WebService(endpointInterface = "com.mkyong.ws.HelloWorld")
+@WebService(endpointInterface = "sample.HelloWorld", serviceName="Hello" )
 public class HelloWorldImpl implements HelloWorld{
  
 	@Override

@@ -1,4 +1,4 @@
-package com.mkyong.ws;
+package sample;
  
 import javax.jws.WebMethod;
 import javax.jws.WebService;
